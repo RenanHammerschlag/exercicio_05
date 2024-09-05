@@ -1,0 +1,38 @@
+//	4. Elabore um programa para solicitar o nome, o sexo e o salário
+//	bruto de um empregado. Se o seu sexo for masculino, descontar
+//	5% de seu salário; caso contrário, descontar 3%. Informar o
+//	valor do desconto e o salário líquido.
+
+package control;
+import java.util.Scanner;
+public class main_class {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Nome: ");
+		String nome = new String();
+		nome = sc.next();
+		
+		System.out.print("Sexo: ");
+		String sexo = new String();
+		sexo = sc.next();
+		
+		System.out.print("Salario bruto:");
+		double salario = sc.nextDouble();
+		
+		if(sexo.equalsIgnoreCase("Masculino")) {
+			double desconto_Masc =  salario * 0.05;
+			double salario_liquido_Masc = salario - desconto_Masc;
+			System.out.println("Nome: "+nome);
+			System.out.println("Seu salario liquido: "+salario_liquido_Masc);
+		}else if(sexo.equalsIgnoreCase("feminino")) {
+			double desconto_Fem =  salario * 0.03;
+			double salario_liquido_Fem = salario - desconto_Fem;
+			System.out.println("Nome: "+nome);
+			System.out.println("Seu salario liquido: "+salario_liquido_Fem);
+		}
+		
+		sc.close();
+	}
+}

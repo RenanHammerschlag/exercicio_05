@@ -1,0 +1,32 @@
+//	3. Faça um programa para solicitar o nome e as duas notas e um
+//	aluno. Calcular sua média e informá-la. Se ela for inferior a
+//	7, escrever "Reprovado”; caso contrário escrever "Aprovado".
+
+package control;
+import java.util.Scanner;
+public class main_class {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Nome: ");
+		String nome_Aluno = new String();
+		nome_Aluno = sc.next();
+		
+		System.out.print("Nota 1: ");
+		double nota_1 = sc.nextDouble();
+		
+		System.out.print("Nota 2: ");
+		double nota_2 = sc.nextDouble();
+		
+		double media = (nota_1 + nota_2) /2;
+		
+		System.out.println("Nome: "+nome_Aluno);
+		if(media < 7) {
+			System.out.println("Nota: "+ media +" Reprovado! ");
+		}else {
+			System.out.println("Nota: "+ media + " Aprovado");
+		}
+		sc.close();
+	}
+}

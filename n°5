@@ -1,0 +1,26 @@
+//	5. Faça um programa que leia dois números e mostre qual o maior
+//	dos dois. O programa deve informar caso sejam iguais.
+
+package control;
+import java.util.Scanner;
+
+public class main_class {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite dois numeros: ");
+		int num_1 = sc.nextInt(), num_2 = sc.nextInt();
+		
+		if(num_1 > num_2) {
+			System.out.println("Primeiro é maior");
+		}else if(num_2 > num_1) {
+			System.out.println("Sefundo é maior");
+		}else if(num_1 == num_2) {
+			System.out.println("São iguais");
+		}
+
+		
+		sc.close();
+	}
+}
