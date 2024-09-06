@@ -1,0 +1,44 @@
+//	9. Dado três valores X,Y,Z, verificar se eles podem ser o
+//	comprimento dos lados de um triângulo e, se forem, verificar
+//	se é um triângulo, equilátero, isósceles ou escaleno. Se eles
+//	não formarem um triângulo, escreverem uma mensagem. Obs: O
+//	comprimento de cada lado de um triângulo é menor do que a soma
+//	dos comprimentos dos outros dois lados; chama-se triângulo
+//	equilátero ao triângulo que tem os comprimentos dos três lados
+//	iguais; chama-se triângulo isósceles ao triângulo que tem os
+//	comprimentos de dois lados iguais. Portanto, todo triângulo
+//	equilátero é também isósceles; chama-se triângulo escaleno ao
+//	triângulo que tem os comprimentos dos três lados diferentes.
+
+package control;
+import java.util.Scanner;
+public class main_class {
+
+public static void main(String args[]) {
+		//triangulo = x + y > z || x + z > y || y + z > x;
+		//triangulo isoceles = x == y || x == z || y == z;
+		//triangul equilatero = x = y && y = z ;
+		//triangulo escaleno = x != y && y != z;
+	
+		Scanner sc = new Scanner(System.in);
+	
+		System.out.println("De os lados do triangulo: ");
+		
+		double x = sc.nextDouble(), y = sc.nextDouble(),z = sc.nextDouble();
+		
+		if(x + y > z || x + z > y || y + z > x) {
+			System.out.println("é um triangulo");
+			if(x == y & y == z ) {
+				System.out.print("Equilatero");
+			}else if(x == y || x == z || y == z) {
+				System.out.print("Isoceles");
+			}else if(x != y && y!=z){
+				System.out.print("Escaleno");
+			}
+		}else {
+			System.out.println("Não é um triangulo");
+		}
+		sc.close();
+		
+	}
+}
