@@ -1,0 +1,25 @@
+//	7. Elabore um programa que leia três números diferentes e informe
+//	o maior deles.
+
+package control;
+import java.util.Scanner;
+public class main_class {
+
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Digite 3 numeros: ");
+		int num_1 = sc.nextInt();
+		int num_2 = sc.nextInt();
+		int num_3 = sc.nextInt();
+		
+		if(num_1 > num_2 && num_1 > num_3) {
+			System.out.print("Num_1 é maior.");
+		}else if(num_2 > num_1 && num_2 > num_3) {
+			System.out.print("Num_2 é maior.");
+		}else if(num_3 > num_2 && num_3 > num_1) {
+			System.out.print("Num_3 é maior.");
+		}
+		sc.close();
+	}
+}
