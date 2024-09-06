@@ -1,0 +1,36 @@
+//	6. Crie um programa para ler o valor do salário-mínimo, o nome e
+//	o salário bruto de um empregado. Se o seu salário for menor
+//	que um salário-mínimo descontar 2%; se for igual, descontar
+//	5%, e se for superior, descontar 8%. Informar o valor do
+//	desconto e o salário líquido.
+
+package control;
+import java.util.Scanner;
+public class main_class {
+
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		double salario_minimo = 1320.00;
+		
+		System.out.print("Nome: ");
+		String nome = new String();
+		nome = sc.next();
+		
+		System.out.print("Slario bruto: ");
+		double salario_bruto = sc.nextDouble();
+		
+		if(salario_bruto < salario_minimo) {
+			double salarioMenor_ajuste= salario_bruto - (salario_bruto * 0.02);
+			System.out.println(salarioMenor_ajuste);
+		}else if(salario_bruto == salario_minimo) {
+			double salarioIgual_ajuste= salario_bruto-(salario_bruto*0.05);
+			System.out.println(salarioIgual_ajuste);
+		}else if(salario_bruto > salario_minimo) {
+			double salarioMaior_ajuste = salario_bruto - (salario_bruto*0.08);
+			System.out.println(salarioMaior_ajuste);
+		}
+		
+		sc.close();
+	}
+}
